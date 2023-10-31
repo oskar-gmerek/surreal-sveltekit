@@ -23,25 +23,6 @@ services:
       - 8000:8000
     depends_on:
       - caddy
-  # sveltekit:
-  #   container_name: svelte
-  #   restart: unless-stopped
-  #   environment:
-  #     - ORIGIN=https://localhost
-  #     - DB_USER=SurrealSvelteKit
-  #     - DB_PASSWORD=*****_***
-  #     - DB_LOG_LEVEL=debug
-  #     - SURREALDB_URL=http://localhost:8000/rpc
-  #     - HOST=0.0.0.0
-  #   ports:
-  #     - '3000:3000'
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #   volumes:
-  #     - $PWD/static:/static
-  #   depends_on:
-  #     - database
   caddy:
     container_name: caddy2
     image: caddy:latest
