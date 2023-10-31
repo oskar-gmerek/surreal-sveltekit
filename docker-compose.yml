@@ -1,0 +1,65 @@
+services:
+  database:
+    container_name: database
+    restart: unless-stopped
+    env_file:
+      - .env
+    entrypoint:
+      - /surreal
+      - start
+      - --allow-guests
+      - --auth
+      - --log
+      - $DB_LOG_LEVEL
+      - --user
+      - $DB_USER
+      - --pass
+      - $DB_PASSWORD
+      - file:/db/surreal.db
+    volumes:
+      - ./db:/db
+    image: surrealdb/surrealdb:latest
+    ports:
+      - 8000:8000
+    depends_on:
+      - caddy
+  # sveltekit:
+  #   container_name: svelte
+  #   restart: unless-stopped
+  #   environment:
+  #     - ORIGIN=https://localhost
+  #     - DB_USER=SurrealSvelteKit
+  #     - DB_PASSWORD=*****_***
+  #     - DB_LOG_LEVEL=debug
+  #     - SURREALDB_URL=http://localhost:8000/rpc
+  #     - HOST=0.0.0.0
+  #   ports:
+  #     - '3000:3000'
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - $PWD/static:/static
+  #   depends_on:
+  #     - database
+  caddy:
+    container_name: caddy2
+    image: caddy:latest
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '443:443'
+      - '443:443/udp'
+      - '777:777'
+    volumes:
+      - $PWD/Caddyfile:/etc/caddy/Caddyfile
+      - caddy2_data:/data
+      - caddy2_config:/config
+
+volumes:
+  caddy2_data:
+    name: caddy2_data
+  caddy2_config:
+    name: caddy2_config
+  db:
+    name: db

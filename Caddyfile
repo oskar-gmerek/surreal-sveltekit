@@ -1,0 +1,12 @@
+{
+	debug
+}
+
+:443 {
+	reverse_proxy :3000
+}
+
+:777 {
+	reverse_proxy :8000
+}
+
