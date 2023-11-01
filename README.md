@@ -4,6 +4,10 @@
 
 https://github.com/oskar-gmerek/surreal-sveltekit/assets/53402105/e6df634b-e062-4154-b153-71a0c0735c3a
 
+### Username Validation
+
+https://github.com/oskar-gmerek/surreal-sveltekit/assets/53402105/8ef24ab4-672e-4669-bd26-f7580523907a
+
 ## CRUD & Realtime
 
 https://github.com/oskar-gmerek/surreal-sveltekit/assets/53402105/30232b45-a5a9-4368-bc0b-095c11b6ef5e
