@@ -12,11 +12,14 @@ https://github.com/oskar-gmerek/surreal-sveltekit/assets/53402105/30232b45-a5a9-
 - [Docker](https://www.docker.com/products/docker-desktop)
 - Ensure that ports `5173` and `8000` are available for use.
 
-## Modern Dependencies:
+## Modern Stack:
+- `SurrealDB` - The ultimate multi-model database
 - `surrealdb.js` for interacting with awesome [SurrealDB](https://surrealdb.com)
 - `sveltekit-superforms` + `zod` to enable super powers in working with forms - [Superforms](https://superforms.rocks/) | [Zod](https://zod.dev/)
 - `@master/css.svelte` as an interesting alternative for TailwindCSS - [MasterCSS](https://beta.css.master.co/docs/installation)
 - `dayjs` to enable high level of DX in working with time and dates - [Day.js](https://day.js.org/)
+- `Caddy Server` - as a modern reverse proxy to enable TLS automatically and by default in development and/or production - [Caddy 2](https://caddyserver.com/v2) - currently not in use
+
 
 ## Setup Process:
 
