@@ -10,8 +10,8 @@ export const load = (async ({ parent, params }) => {
 	const post = await db.query<[Post[]]>('SELECT *, author.* FROM post WHERE slug = $slug LIMIT 1', {
 		slug: params.post_slug
 	});
-	const form = await superValidate(post[0].result?.[0] as Post, schema);
-	return { form, locals, post: post[0].result?.[0] as Post | undefined };
+	const form = await superValidate(post[0][0] as Post, schema);
+	return { form, locals, post: post[0][0] as Post };
 }) satisfies PageServerLoad;
 
 export const actions = {

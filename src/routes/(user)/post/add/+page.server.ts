@@ -7,10 +7,10 @@ import type { Post } from '$types';
 
 export const load = (async ({ locals }) => {
 	const form = await superValidate(schema);
-	// const my_posts = await db.query<[Post[]]>('SELECT *, author.* FROM post ORDER BY created_at DESC');
-	const my_posts = await db.query<[Post[]]>('SELECT * FROM your_posts ORDER BY created_at DESC');
+	const my_posts = await db.query<[Post[]]>('SELECT *, author.* FROM post ORDER BY created_at DESC');
+	// const my_posts = await db.query<[Post[]]>('SELECT * FROM your_posts ORDER BY created_at DESC');
 
-	return { form, locals, my_posts: my_posts[0].result as Post[] };
+	return { form, locals, my_posts: my_posts[0] as Post[] };
 }) satisfies PageServerLoad;
 
 export const actions = {

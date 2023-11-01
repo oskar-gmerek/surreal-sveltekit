@@ -20,14 +20,14 @@ export const actions = {
 		}
 
 		const { username, 'current-password': password } = form.data;
-		await db.use({ ns: 'surreal', db: 'sveltekit' }).catch((err: Error) => {
+		await db.use({ namespace: 'surreal', database: 'sveltekit' }).catch((err: Error) => {
 			throw error(500, `Error: ${err.message}`);
 		});
 
 		try {
 			await db
 				.signin({
-					SC: 'user',
+					scope: 'user',
 					username: username,
 					password: password
 				})

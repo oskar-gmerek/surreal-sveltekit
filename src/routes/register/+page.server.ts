@@ -23,7 +23,7 @@ export const actions = {
 
 		try {
 			await db.signup({
-				SC: 'user',
+				scope: 'user',
 				username: username,
 				password: password
 			});

@@ -20,7 +20,7 @@ const database = {
 					_db = new Surreal();
 
 					if (!DB_URL) return null;
-					await _db.connect(DB_URL, { ns: 'surreal', db: 'sveltekit' });
+					await _db.connect(DB_URL, { namespace: 'surreal', database: 'sveltekit' });
 				} catch (error) {
 					if (retries < MAX_RETRIES) {
 						retries++;
