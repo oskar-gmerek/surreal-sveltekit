@@ -12,7 +12,7 @@ export default {
 			sans: ['akshar', ...variables.fontFamily.sans],
 		},
 		fontWeight: {
-			normal: 300,
+			normal: 400,
 			bold: 600
 		}
 	},
