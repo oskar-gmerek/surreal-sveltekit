@@ -20,7 +20,6 @@ const database = {
 					_db = new Surreal();
 
 					if (!DB_URL) return null;
-					// await _db.connect(DB_URL, { ns: 'surreal', db: 'sveltekit' });
 					await _db.connect(DB_URL, { ns: 'surreal', db: 'sveltekit' });
 				} catch (error) {
 					if (retries < MAX_RETRIES) {
@@ -59,8 +58,3 @@ export const observeLive = async <T extends Record<string, unknown>>(thing: stri
 			}
 		});
 };
-
-// export const queryLive = async <T extends Record<string, unknown>>(thing: string, filter: string, store: Writable<T[]>) => {
-// 		await db.query('LIVE SELECT $thing WHERE $filter '
-// 		});
-// };

@@ -17,11 +17,9 @@
 				title="Register">{user.username}</a
 			><span class="hidden@<2xs">!</span>
 		</div>
-		<!-- {$page.route.id} -->
 		{#if $page.route.id !== '/(user)'}
 			<div class="flex w:full jc:center px:10 fg:black_a:hover br:2|solid|black_a br:0_a:last px:5_a">
 					<a href="/" title="">back to Homepage</a>
-					<!-- <a href="" title="">Your posts</a> -->
 			</div>
 			{/if}
 		<div class="flex  w:full jc:right px:10_button fg:black_button:hover">
