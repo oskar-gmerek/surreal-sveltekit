@@ -22,16 +22,17 @@
 				{#if data.author?.website}
 				<p>	Website: <a href={data.author?.website } title={`Let's connect!`}>{data.author?.website}</a></p>
 				{/if}
-				{#if data.author?.etoro}
-				<p>	eToro: <a href={data.author?.etoro } title={`Copy investment portfolio`}>Copy investment portfolio</a></p>
-				{/if}
 				{#if data.author?.linkedin}
 				<p>	LinkedIn: <a href={data.author?.linkedin} title={`Connect with ${data.author.username} on LinkedIn`}>Connect on LinkedIn</a></p>
 				{/if}
 				{#if data.author?.github}
 				<p>	GitHub: <a href={data.author?.github } title={`Check ${data.author.username}'s GitHub profile`}>Check GitHub profile</a></p>
 				{/if}
+
 			</div>
+			{#if data.author?.etoro}
+			<p>Copy investment portfolio on	eToro: <span class="font:bold">{data.author?.etoro}</span></p>
+			{/if}
 	
 	
 		</div>
