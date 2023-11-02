@@ -5,6 +5,7 @@
 	import { Fragment } from '@master/css.svelte';
 	import Nav from '$lib/modules/Nav.svelte';
 	import '@master/normal.css';
+	import Footer from '$lib/modules/Footer.svelte';
 
 	let CSSProvider: ComponentType<CSSProviderType> = Fragment as any;
 
@@ -17,7 +18,8 @@
 
 <svelte:component this={CSSProvider} config={import('../master.css')}>
 	<Nav user={data.locals.user} />
-	<div class="app">
+	<div class="app min-vh">
 		<slot />
 	</div>
+	<Footer />
 </svelte:component>
