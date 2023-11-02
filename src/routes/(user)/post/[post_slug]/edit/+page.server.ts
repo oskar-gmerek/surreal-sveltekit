@@ -38,7 +38,6 @@ export const actions = {
 				.catch((e: Error) => {
 					if (e.message.includes('title' && title)) {
 						isError = true
-						console.log(e.message);
 						return setError(
 							form,
 							'title',

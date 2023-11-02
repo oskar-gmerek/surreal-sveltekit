@@ -26,7 +26,7 @@ const database = {
 						retries++;
 						setTimeout(tryConnect, RETRY_TIMEOUT);
 					} else {
-						console.log('surreal.ts error');
+						console.log('Database connection failed.');
 						throw error;
 					}
 				}

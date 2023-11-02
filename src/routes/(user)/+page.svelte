@@ -29,8 +29,6 @@
 	
 	const link_user_prefix = '/author/'
 
-
-$: console.log($your_posts.length)
 </script>
 
 <div class="w:full text:center">
