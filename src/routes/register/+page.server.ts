@@ -4,10 +4,10 @@ import { schema } from './schema';
 import { fail, type Actions, redirect } from '@sveltejs/kit';
 import { db } from '$lib/surreal';
 
-export const load = (async () => {
+export const load = (async ({ locals }) => {
 	const form = await superValidate(schema);
 
-	return { form };
+	return { form, locals };
 }) satisfies PageServerLoad;
 
 export const actions = {

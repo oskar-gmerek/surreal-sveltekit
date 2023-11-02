@@ -5,8 +5,7 @@ import type { Post } from '$types';
 import {  setError, superValidate } from 'sveltekit-superforms/server';
 import { schema } from './schema';
 
-export const load = (async ({ parent, params }) => {
-	const { locals } = await parent();
+export const load = (async ({ locals, params }) => {
 	const post = await db.query<[Post[]]>('SELECT *, author.* FROM post WHERE slug = $slug LIMIT 1', {
 		slug: params.post_slug
 	});
