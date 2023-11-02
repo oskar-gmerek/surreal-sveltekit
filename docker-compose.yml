@@ -21,26 +21,7 @@ services:
     image: surrealdb/surrealdb:latest
     ports:
       - 8000:8000
-    depends_on:
-      - caddy
-  caddy:
-    container_name: caddy2
-    image: caddy:latest
-    restart: unless-stopped
-    ports:
-      - '80:80'
-      - '443:443'
-      - '443:443/udp'
-      - '777:777'
-    volumes:
-      - $PWD/Caddyfile:/etc/caddy/Caddyfile
-      - caddy2_data:/data
-      - caddy2_config:/config
 
 volumes:
-  caddy2_data:
-    name: caddy2_data
-  caddy2_config:
-    name: caddy2_config
   db:
     name: db
