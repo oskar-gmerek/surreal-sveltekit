@@ -35,7 +35,6 @@
   "private": true,
   "scripts": {
     "multitaskum:developum": "docker compose up -d && vite dev --host",
-    "multitaskum:revelio": "docker compose up -d ",
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
