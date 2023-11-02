@@ -28,7 +28,15 @@ https://github.com/oskar-gmerek/surreal-sveltekit/assets/53402105/30232b45-a5a9-
 ## Setup Process:
 
 1. Clone the repository to your local machine.
-2. Execute the provided npm script. For example:
+2. Install dependencies. For example:
+```ts
+bun install
+```
+If you don't have [bun](https://bun.sh) installed, you can utilize pnpm or any other Node.js package manager. For instance:
+```
+pnpm install
+```
+3. Execute the provided npm script. For example:
 ```ts
 bun run multitaskum:developum
 ```
@@ -38,8 +46,8 @@ pnpm run multitaskum:developum
 ```
 This command will initiate SurrealDB within a Docker container and launch SvelteKit in your local development environment.
 
-3. Access [http://localhost:5173](http://localhost:5173) using your preferred web browser.
-4. Test various functionalities such as creating a new account, logging in, generating new posts, editing posts, and deleting them.
+4. Access [http://localhost:5173](http://localhost:5173) using your preferred web browser.
+5. Test various functionalities such as creating a new account, logging in, generating new posts, editing posts, and deleting them.
 
 ## Issues and Contributions:
 
