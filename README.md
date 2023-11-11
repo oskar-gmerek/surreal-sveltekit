@@ -1,5 +1,8 @@
 # Surreal Sveltekit: A Starter Kit with SurrealDB and SvelteKit, featuring Authentication and CRUD Operations + Realtime
 
+## Feedback
+⭐ Found this project helpful? Show some love with a star! Your support keeps the code evolving. 🚀
+
 ## Auth
 
 https://github.com/oskar-gmerek/surreal-sveltekit/assets/53402105/e6df634b-e062-4154-b153-71a0c0735c3a
