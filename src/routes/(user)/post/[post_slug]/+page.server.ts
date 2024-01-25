@@ -16,7 +16,7 @@ export const load = (async ({ params, locals }) => {
 export const actions = {
 	remove: async ({request, locals}) => {
 		const user = locals.user;
-		if (!user) throw redirect(303, '/login');
+		if (!user) redirect(303, '/login');
 
 		const form = await superValidate(request, schema);
 
@@ -38,6 +38,6 @@ export const actions = {
 		
 
 
-		throw redirect(303, '/');
+		redirect(303, '/');
 	}
 } satisfies Actions;

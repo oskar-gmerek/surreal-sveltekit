@@ -15,7 +15,7 @@
 
 <div class="min-vh min-w:full p:20 flex center-content">
 	<div class="flex flex:col">
-		<h1 class="ai:center text:center" title="Join the Community of Adults">Log In</h1>
+		<h1 class="ai:center text:center">Log In</h1>
 
 		<form method="POST" use:enhance action="?/login" class={`${mcssForm} w:600 w:98%@<2xs `}>
 			{#if $message}

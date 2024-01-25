@@ -18,7 +18,7 @@ services:
       - file:/db/surreal.db
     volumes:
       - ./db:/db
-    image: surrealdb/surrealdb:latest
+    image: surrealdb/surrealdb:v1.1.1
     ports:
       - 8000:8000
 

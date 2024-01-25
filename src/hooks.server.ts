@@ -34,7 +34,7 @@ const auth = (async ({ event, resolve }) => {
 			if (!event.locals.user) {
 				const user = (await db.info().catch((err: Error) => {
 					console.log(`error: ${err.message}`);
-					throw error(500, 'Something wrong with database connection.');
+					error(500, 'Something wrong with database connection.');
 				})) as User;
 				event.locals.user = user;
 			}
@@ -52,7 +52,7 @@ const auth = (async ({ event, resolve }) => {
 	}
 	if (authRoute && token) {
 		// Prevent logged in users from navigating to login / register forms.
-		throw redirect(303, '/');
+		redirect(303, '/');
 	}
 
 	// If no problems found - let's go.

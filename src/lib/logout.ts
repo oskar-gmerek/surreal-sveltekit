@@ -12,8 +12,8 @@ export const logout = async (event: RequestEvent, redirect_to?: string) => {
 	});
 	await db.invalidate();
 	if (redirect_to) {
-		throw redirect(302, redirect_to);
+		redirect(302, redirect_to);
 	} else {
-		throw redirect(302, '/login');
+		redirect(302, '/login');
 	}
 };

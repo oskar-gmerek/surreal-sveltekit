@@ -16,7 +16,7 @@ export const load = (async ({ locals, params }) => {
 export const actions = {
 	edit: async ({ request, locals, params }) => {
 		const user = locals.user;
-		if (!user) throw redirect(303, '/login');
+		if (!user) redirect(303, '/login');
 		const form = await superValidate(request, schema);
 
 		if (!form.valid) {
@@ -25,7 +25,7 @@ export const actions = {
 
 		const { author_id, post_id, title, content } = form.data;
 		if (author_id !== locals.user?.id) {
-			throw error(403, `You are not a Russian propagandist, you can't modify other people's posts.`)
+			error(403, `You are not a Russian propagandist, you can't modify other people's posts.`);
 		}
 		let isError = false
 		try {
@@ -48,10 +48,10 @@ export const actions = {
 				})
 		} catch (e) {
 			const err = e as Error;
-			throw error(500, `Error: ${err.message}`);
+			error(500, `Error: ${err.message}`);
 		}
 
-		if (!isError) throw redirect(303, `/post/${params.post_slug}`)
+		if (!isError) redirect(303, `/post/${params.post_slug}`);
 		return { form }
 	}
 } satisfies Actions;

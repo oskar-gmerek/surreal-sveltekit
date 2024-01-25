@@ -18,7 +18,7 @@ export const load = (async ({ locals }) => {
 export const actions = {
 	add_post: async ({ request, locals }) => {
 		const user = locals.user;
-		if (!user) throw redirect(303, '/login');
+		if (!user) redirect(303, '/login');
 		const form = await superValidate(request, schema);
 
 		if (!form.valid) {
@@ -56,7 +56,7 @@ export const actions = {
 				});
 		} catch (e) {
 			const err = e as Error;
-			throw error(500, `Error: ${err.message}`);
+			error(500, `Error: ${err.message}`);
 		}
 
 		return { form };

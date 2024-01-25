@@ -12,7 +12,7 @@ export const load = (async ({ locals }) => {
 
 export const actions = {
 	register: async ({ request, locals }) => {
-		if (locals.user) throw redirect(303, '/');
+		if (locals.user) redirect(303, '/');
 		
 		const form = await superValidate(request, schema);
 		const { username, 'new-password': password } = form.data;
@@ -31,6 +31,6 @@ export const actions = {
 			const error = err as Error;
 			console.log(error);
 		}
-		throw redirect(303, '/login');
+		redirect(303, '/login');
 	}
 } satisfies Actions;

@@ -7,7 +7,7 @@ export const load = (async ({ locals, params }) => {
 	const author = await db.query<[User[]]>('SELECT * FROM user WHERE slug = $slug LIMIT 1', {
 		slug: params.author_slug
 	}) 
-	if (!author) throw error(404, `This author is not registered yet.`);
+	if (!author) error(404, `This author is not registered yet.`);
 
 	return { locals, author: author[0][0] as User };
 }) satisfies PageServerLoad;

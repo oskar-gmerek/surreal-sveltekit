@@ -34,7 +34,7 @@
 <div class="w:full text:center">
 	<a
 		href="/post/add"
-		class="bg:yellow-70 bg:yellow-72:hover p:15|30 fg:gray-20 f:bold rb:3">Add post</a
+		class="rel top:15 bg:yellow-70 bg:yellow-72:hover p:15|30 fg:gray-20 f:bold rb:3">Add post</a
 	>
 </div>
 <div class="min-vh min-w:full p:20">

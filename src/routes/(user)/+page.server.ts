@@ -35,6 +35,6 @@ export const actions = {
 		});
 
 		await db.invalidate();
-		throw redirect(303, '/');
+		redirect(303, '/');
 	}
 } satisfies Actions;

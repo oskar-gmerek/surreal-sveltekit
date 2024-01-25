@@ -12,7 +12,7 @@ export const load = (async ({ locals }) => {
 
 export const actions = {
 	login: async ({ request, locals, cookies }) => {
-		if (locals.user) throw redirect(303, '/');
+		if (locals.user) redirect(303, '/');
 		const form = await superValidate(request, schema);
 
 		if (!form.valid) {
@@ -21,7 +21,7 @@ export const actions = {
 
 		const { username, 'current-password': password } = form.data;
 		await db.use({ namespace: 'surreal', database: 'sveltekit' }).catch((err: Error) => {
-			throw error(500, `Error: ${err.message}`);
+			error(500, `Error: ${err.message}`);
 		});
 
 		try {
@@ -32,7 +32,7 @@ export const actions = {
 					password: password
 				})
 				.then(async (token) => {
-					if (!token) throw error(401, 'Authentication failed');
+					if (!token) error(401, 'Authentication failed');
 					cookies.set('token', token, {
 						path: '/',
 						httpOnly: true,
@@ -46,6 +46,6 @@ export const actions = {
 			setMessage(form, 'Error 605: Too intense, your Force is. Take a mind-break and try again.');
 			return fail(400, { form });
 		}
-		throw redirect(303, '/');
+		redirect(303, '/');
 	}
 } satisfies Actions;
