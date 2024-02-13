@@ -5,7 +5,7 @@
 	export let user: User | undefined;
 
 	const mcssNav =
-		'rel flex bg:yellow-70 w:full top:0 h:70 fg:gray-10/.75 f:bold ai:center px:30  px:2@<2xs';
+		'rel flex bg:yellow-50 w:full top:0 h:70 fg:gray-90/.75 f:bold ai:center px:30  px:2@<2xs';
 
 </script>
 

@@ -1,27 +1,27 @@
-import type { Config } from '@master/css';
-import { variables } from '@master/css';
+// import type { Config } from '@master/css';
+// import { variables } from '@master/css';
 
-export default {
-	styles: {
-		body: 'bg:gray-10 fg:gray-80 f:sans f:18'
-	},
-	colors: {},
-	rules: {},
-	variables: {
-		fontFamily: {
-			sans: ['akshar', ...variables.fontFamily.sans],
-		},
-		fontWeight: {
-			normal: 400,
-			bold: 600
-		}
-	},
-	semantics: {},
-	mediaQueries: {},
-	animations: {},
-	selectors: {},
-	functions: {}
-} satisfies Config as Config;
+// export default {
+// 	styles: {
+// 		body: 'bg:gray-10 fg:gray-80 f:sans f:18'
+// 	},
+// 	colors: {},
+// 	rules: {},
+// 	variables: {
+// 		fontFamily: {
+// 			sans: ['akshar', ...variables.fontFamily.sans],
+// 		},
+// 		fontWeight: {
+// 			normal: 400,
+// 			bold: 600
+// 		}
+// 	},
+// 	semantics: {},
+// 	mediaQueries: {},
+// 	animations: {},
+// 	selectors: {},
+// 	functions: {}
+// } satisfies Config as Config;
 
 
 

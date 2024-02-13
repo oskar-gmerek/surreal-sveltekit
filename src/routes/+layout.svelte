@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { CSSProvider as CSSProviderType } from '@master/css.svelte';
 	import type { LayoutData } from './$types';
 	import { onMount, type ComponentType } from 'svelte';
 	import { Fragment } from '@master/css.svelte';
@@ -7,16 +6,18 @@
 	import '@master/normal.css';
 	import Footer from '$lib/modules/Footer.svelte';
 
-	let CSSProvider: ComponentType<CSSProviderType> = Fragment as any;
+	import type { CSSRuntimeProvider as CSSProviderType } from "@master/css.svelte";
+ 
+    let CSSRuntimeProvider: ComponentType<CSSProviderType> = Fragment as any;
 
 	onMount(async () => {
-		CSSProvider = (await import('@master/css.svelte')).CSSProvider;
+		CSSRuntimeProvider = (await import('@master/css.svelte')).CSSRuntimeProvider;
 	});
 
 	export let data: LayoutData;
 </script>
 
-<svelte:component this={CSSProvider} config={import('../master.css')}>
+<svelte:component this={CSSRuntimeProvider} config={import('../../master.css')}>
 	<Nav user={data.locals.user} />
 	<div class="app min-vh">
 		<slot />

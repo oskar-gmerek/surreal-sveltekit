@@ -1,1 +1,1 @@
-export const mcssButton = `p:15|30 bg:yellow-70 bg:yellow-72:hover cursor:pointer f:bold fg:gray-20 fg:gray-10:hover mx:20 r:3`
+export const mcssButton = `p:15|30 bg:yellow-50 bg:yellow-40hover cursor:pointer f:bold fg:gray-80 fg:gray-90:hover mx:20 r:3`

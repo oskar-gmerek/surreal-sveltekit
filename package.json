@@ -39,5 +39,8 @@
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
     "format": "prettier --plugin-search-dir . --write ."
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@master/css": "2.0.0-rc.13"
+  }
 }

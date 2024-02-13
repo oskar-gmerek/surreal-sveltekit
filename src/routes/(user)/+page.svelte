@@ -34,7 +34,7 @@
 <div class="w:full text:center">
 	<a
 		href="/post/add"
-		class="rel top:15 bg:yellow-70 bg:yellow-72:hover p:15|30 fg:gray-20 f:bold rb:3">Add post</a
+		class="rel top:15 bg:yellow-50 bg:yellow-40hover p:15|30 fg:gray-80 fg:gray-90:hover f:bold rb:3">Add post</a
 	>
 </div>
 <div class="min-vh min-w:full p:20">
@@ -63,18 +63,18 @@
 					</div>
 				</div>
 			</a>
-				<div class="grid-col-span:3 bg:yellow-70 flex fg:gray-20 p:10">
+				<div class="grid-col-span:3 bg:yellow-50 flex fg:gray-80 p:10">
 					<div class="as:center px:4"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 6H2V2h18v4m-3.5 6H15v5l3.61 2.16l.75-1.22l-2.86-1.69V12m6.5 4c0 3.87-3.13 7-7 7c-2.38 0-4.47-1.19-5.74-3H3V7h16v2.68c2.36 1.13 4 3.53 4 6.32M8 12h2.26c.57-.81 1.3-1.5 2.15-2H8.5c-.28 0-.5.22-.5.5V12m13 4c0-2.76-2.24-5-5-5s-5 2.24-5 5s2.24 5 5 5s5-2.24 5-5Z"/></svg></div>
-					<div class="px:4 fg:gray-20 white-space:nowrap as:center font:bold">Latest user:</div>
+					<div class="px:4 fg:gray-80 white-space:nowrap as:center font:bold">Latest user:</div>
 					<div class="px:6 overflow:hidden white-space:nowrap text-overflow:ellipsis as:center flex"><a href={link_user_prefix+$latest_user[0].slug} title={$latest_user[0].username} class="fg:black:hover">{$latest_user[0].username}</a><p class="px:3 hidden@<2xs"> joined {dayjs($latest_user[0].created_at).fromNow()}</p></div>
 				</div>
 		</div>
 
-		<h1 class="fg:yellow-70 my:50 text:underline f:40">Latest posts</h1>
+		<h1 class="fg:yellow-50 my:50 text:underline f:40">Latest posts</h1>
 
 		{#if $posts.length > 0}
 			{#each $posts as post, i (post.id)}
-			<div class="my:10 bg:yellow-70 fg:black/.7 r:5 p:10 overflow:hidden" id={'post_' + i}
+			<div class="my:10 bg:yellow-50 fg:black/.7 r:5 p:10 overflow:hidden" id={'post_' + i}
 			transition:slide={{ delay: 250, duration: 600, easing: quintOut, axis: 'y' }}>
 				<div class="flex ">
 					<div class="text:right w:full">

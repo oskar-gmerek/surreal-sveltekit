@@ -1,4 +1,4 @@
-export const card = 'bg:yellow-70 fg:gray-20 p:10 p:6@<2xs flex mt:50 as:center r:3'
+export const card = 'bg:yellow-50 fg:gray-80 p:10 p:6@<2xs flex mt:50 as:center r:3'
 export const card_title = 'pt:10 px:20 px:2@<2xs font:bold font:14@<2xs white-space:nowrap white-space:normal@<2xs text:center@<2xs'
 export const card_stat = 'px:20 font:30 font:24@<2xs font:bold text:center@<2xs'
 export const card_icon = '48x48_svg 32x32_svg@<2xs p:10 p:2@<2xs as:center '

@@ -51,11 +51,11 @@
 			<button class={mcssButton}>Add post</button>
 		</form>
 
-		<h1 class="fg:yellow-70 my:50 text:underline f:40">Your latest posts:</h1>
+		<h1 class="fg:yellow-50 my:50 text:underline f:40">Your latest posts:</h1>
 
 		{#if $posts.length > 0}
 			{#each $posts as post, i (post.id)}
-			<div class="my:10 bg:yellow-70 fg:black/.7 r:5 p:10 overflow:hidden" id={'post_' + i}
+			<div class="my:10 bg:yellow-50 fg:black/.7 r:5 p:10 overflow:hidden" id={'post_' + i}
 			transition:slide={{ delay: 250, duration: 600, easing: quintOut, axis: 'y' }}>
 				<div class="flex ">
 					<div class="text:right w:full">

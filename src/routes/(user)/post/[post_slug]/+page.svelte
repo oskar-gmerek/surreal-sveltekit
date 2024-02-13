@@ -21,7 +21,7 @@
 					{$message}
 				</div>
 			{/if}
-	<div class="bg:yellow-70 fg:black r:5 p:10 overflow:hidden">
+	<div class="bg:yellow-50 fg:black r:5 p:10 overflow:hidden">
 		<div class="flex ">
 			{#if data.post?.author.id === data.locals.user?.id} 
 			<div class="text:left w:full f:bold"><a href={`/post/${data.post?.slug}/edit`} title="Modify post">EDIT</a> | 
